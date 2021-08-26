@@ -1,0 +1,338 @@
+/* Home Page */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #ffe6f7;
+}
+
+.logo {
+    color: #666;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links a {
+    color: #666;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-burger {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #666;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1060px) {
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh; 
+        background-color: #ffe6f7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-burger {
+        display: block;
+    }
+
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px); 
+}
+
+/* Name Boxes Styles */
+
+.characterContainer {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-gap: 30px;
+    justify-content: space-evenly;
+    padding: 50px;
+    background-color: rgb(255, 247, 252);
+    
+}
+
+.name-links {
+    text-decoration: none;
+    color: #fff;
+}
+
+.characterContainer div {
+    background-color: #666;
+    border: 1px solid #ffe6f7;
+    text-align: center;
+    height: 70px;
+    font-size: 3em;
+    font-family: MiyaWayne;
+    text-decoration: none;
+    
+}
+
+
+
+
+
+
+/* Character Pages */
+
+/* Core Styles */
+
+@font-face {
+    font-family: MiyaWayne;
+    src: url(MiyaWayne-1Gna0.otf);
+    
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 1em 0;
+}
+
+p {
+    margin: 0;
+    padding: 1em 0;
+}
+
+.btn {
+    display: inline-block;
+    background: none;
+    
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #fff;
+    margin: .5em 0;
+}
+
+.btn:hover {
+    background: #ffe6f7;
+    color: #666;
+}
+
+/* Header Showcase */
+
+#showcase {
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+    z-index: -1;
+    
+}
+
+#showcase .bg-image {
+    position: absolute;
+    background: #ffe6f7 url("images/cactus3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 0;
+    color: #fff;
+    font-family: MiyaWayne;
+    font-size: 7.5em;
+}
+
+
+#showcase .content-wrap,
+#section-a .content-wrap {
+    padding: 0 1.5em;
+}
+
+/* Section A */
+
+#section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+}
+
+/* Section B */
+
+#section-b {
+    padding: 2em 1em 1em;
+}
+
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#section-b li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+}
+
+.card-content {
+    padding: 1.5em;
+}
+
+/* Section C */
+
+#section-c {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+}
+
+/* Section D */
+
+#section-d .box {
+    padding: 2em;
+    color: #fff;
+}
+
+#section-d .box:first-child {
+    background: #ffe6f7;
+    color: black;
+}
+
+/* Footer */
+
+#main-footer {
+    padding: 2em;
+    background: black;
+    color: #fff;
+    text-align: center;
+}
+
+#main-footer a {
+    color: #ffe6f7;
+    text-decoration: none;
+}
+
+/* Media Query */
+
+@media(min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #section-a .content-text {
+        columns: 2;
+        column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+        padding-top: 0;
+    }
+
+    .content-wrap,
+    #section-b ul {
+        grid-column: 2/4;
+    }
+
+    .box, #main-footer div {
+        grid-column: span 2;
+    }
+
+    #section-b ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #section-b li {
+        width: 31%;
+    }
+}
+ 
